@@ -1,0 +1,22 @@
+{
+  "name": "keki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lyreael/pasteleria_web.git"
+  },
+  "keywords": [
+    "repo"
+  ],
+  "author": "Lyreael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lyreael/pasteleria_web/issues"
+  },
+  "homepage": "https://github.com/Lyreael/pasteleria_web#readme"
+}

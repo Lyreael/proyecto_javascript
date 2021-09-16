@@ -1,0 +1,173 @@
+div{
+&.img__base{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    img.img__base--cupcakes{
+        width: 80%;
+        padding: 15px;
+        margin-bottom: 5% ;
+    }
+  }
+}
+
+img{
+    width: 50%;
+    @extend %border;
+  }
+
+video {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 20px 0;
+}
+
+.iframe{
+  &-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+    &>*{
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+
+// Product
+
+.hover-effect{
+    float: left; /* for demonstration purpose only */
+    padding-right: 20px; /* for demonstration purpose only */
+    position: relative;
+  }
+  
+  .caption{
+    background-color: rgba(#ffffff, 0.9);
+    @extend %border;
+    z-index:5;
+    position: absolute;
+    margin: 0 auto;
+    top: 9%;
+    left: 8%;
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    visibility: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+  
+  .hover-effect:hover{
+    .caption{
+      visibility: visible;
+      -webkit-transform: translate(0, 0%);
+      transform: translate(0, 0%);
+      opacity: 1;
+      -webkit-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+    }
+  }
+  
+  .hover-effect:hover:after{
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    opacity: 0.9;
+  }
+  
+  .caption h3{
+    margin-top: 18%;
+  }
+  
+  .caption h6{
+      margin-top: 0;
+  }
+  
+  .caption h6, .caption h6{
+    padding-top:0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+
+  //  Prod-end
+
+  // us
+
+  //.card{
+  //  width: 80%;
+  //}
+
+  //place
+
+img{
+  &.place-pic{
+    width: 100%;
+  }
+}
+
+
+/*img efecto us*/
+.hover-us img:hover {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* for index */
+
+img.slide{
+  position: relative;
+  animation-name: slider;
+  animation-duration: 2.5s;
+
+}
+@keyframes slider {
+  0%   {opacity:0.1; left:-200px; }
+  100% {left:0px;}
+}
+
+img.rotate{
+  animation: {
+    name:spin;
+    duration: 6000ms;
+    iteration-count: infinite;
+    timing-function: linear;
+}
+@keyframes spin { 
+  from { 
+      transform: rotate(0deg); 
+  } to { 
+      transform: rotate(360deg); 
+  }
+}
+}

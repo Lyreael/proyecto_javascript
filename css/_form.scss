@@ -1,0 +1,56 @@
+section{
+&.contactSp{
+  margin-top: 5%;
+  } 
+}
+.contact-form {
+    background: $lighter;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 1rem;
+    width: 100%;
+  
+    .form-control {
+        margin: 1rem;
+      border-radius: 1rem;
+    }
+  }
+  
+  .contact-image {
+    text-align: center;
+
+    img {
+      width: 20%;
+      margin-top: -10%;
+    }
+  }
+  
+  .contact-form {
+    form {
+      padding: 10%;
+      .row {
+        margin-bottom: -7%;
+      }
+    }
+    .btnContact {
+        margin: 1rem;
+      width: 50%;
+      border: none;
+      border-radius: 1rem;
+      padding: 1.5%;
+      background: $primary;
+      font-weight: 600;
+      color: $white;
+      cursor: pointer;
+    } 
+  }
+  
+  .btnContactSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: $white;
+    background-color: $primary;
+    border: none;
+    cursor: pointer;
+    }

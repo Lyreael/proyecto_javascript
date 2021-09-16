@@ -1,0 +1,153 @@
+//Sizes
+$sm: 1rem;
+$md: 2.5rem;
+$lg: 4rem;
+
+%border {
+  border-radius: 0.5rem;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //background-color: $white;
+}
+
+//Titles & p
+
+h1 {
+  &.title {
+    font: {
+      family: $font-title;
+      size: $title-size;
+      weight: 700;
+    }
+    line-height: 44px;
+    color: $primary;
+    padding: 20px 0 0 20px;
+  }
+  &.title-index {
+    font: {
+      family: $font-title;
+      size: $title-size;
+      weight: 700;
+    }
+    text-align: center;
+    line-height: 44px;
+    color: $primary;
+    padding: 20px 0 0 20px;
+  }
+}
+
+h2 {
+  color: $primary;
+  &.subtitle {
+    color: $secondary;
+    font: {
+      family: $font-subtitle;
+      size: $subtitle-size;
+      weight: 600;
+    }
+    &-product{
+      text-align: center;
+      margin: $sm 0 $md 0;
+    }
+    padding: 20px 0 15px 20px;
+  }
+  &.subtitle-index {
+    color: $secondary;
+    font: {
+      family: $font-subtitle;
+      size: $subtitle-size;
+      weight: 600;
+    }
+    text-align: center;
+    padding: 20px 0 15px 20px;
+  }
+}
+
+h3 {
+  color: $primary;
+  font: {
+    family: $font-title;
+    size: $subtitle-size + -4px;
+  }
+}
+
+h4 {
+  color: $primary;
+  font-size: $subtitle-size + -6px;
+  &.tag-centred {
+    text-align: center;
+  }
+}
+
+h5 {
+  color: $secondary;
+  font: {
+    size: $subtitle-size + -8px;
+    weight: 600;
+  }
+}
+
+h6 {
+  color: $primary;
+  font: {
+    family: $subtitle-size + -10px;
+  }
+}
+
+p {
+  font: {
+    family: $font-base;
+    size: $base-font-size;
+    weight: 400;
+  }
+  line-height: 26px;
+  padding: 10px 10px 10px 25px;
+  margin: 0;
+  color: $colorBase;
+}
+
+section{
+  margin-top: 5%;
+}
+
+div{
+.cat-start{
+  margin-top: 5%;
+}
+}
+//in__present {
+//some
+//&--title {
+//some
+//}
+//&--subtitle {
+//some
+// }
+//  &--text {
+//some
+//  }
+//}
+
+/* Us images*/
+.team-img {
+  padding-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* back to top button*/
+.btn-center {
+    display: flex;
+    align-items:flex-start;
+    justify-content:flex-end;
+}
+.btn-btt{
+  border-radius: 1.5rem;
+}

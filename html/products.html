@@ -36,19 +36,22 @@
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav ml-auto text-uppercase f1">
           <li>
-            <a href="#" >Inicio</a>
+            <a href="../index.html" >Inicio</a>
           </li>
           <li>
-            <a href="#">Nosotros</a>
+            <a href="us.html">Nosotros</a>
           </li>
           <li>
             <a href="products.html" class="active active-first">Productos</a>
           </li>
           <li>
-            <a href="#">Lugar</a>
+            <a href="place.html">Lugar</a>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <a href="contact.html">Contacto</a>
+          </li>
+          <li>
+            <a href="login.html">Tu cuenta</a>
           </li>
           <li></li>
         </ul>
@@ -70,6 +73,8 @@
                   </p>
               </div>
         <!-- Sección de tortas -->
+        <!--<select name="" id=""productoElegido></select>   flechita con opciones--> 
+        <div id="tienda"></div>
           </div>
           <div class="row">
             <h2 class="subtitle subtitle-product" id="tortas" >Tortas</h2>
@@ -93,8 +98,10 @@
                           <p class="card-text">
                               Deliciosa torta de vainilla y moras, esponjoso y con un rellenos suave y delicioso.
                           </p>
-                          <button class="btn btn-primary"> Comprar</button>
-                      </div>
+                          <button  class="btn btn-primary" onclick="clickMe()"> Comprar</button>
+                          <button class="btn btn-primary" id="precioEnvio" > Precio con envío</button>
+                          <p id="mostrarPrecio"></p>
+                        </div>
                   </div>
               </div>
               <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
@@ -117,7 +124,8 @@
                           <p class="card-text">
                             Una torta llena de sorpresas. Probá para descubrir su increible sabor!
                           </p>
-                          <button class="btn btn-primary"> Comprar</button>
+                          <button class="btn btn-primary" > Comprar</button>
+                          
                       </div>
                   </div>
               </div>
@@ -148,6 +156,7 @@
           </div>
 
     <!-- Sección de cupcakes -->
+    
       <div class="row text-center py-3">
         </div>
         <div class="row">

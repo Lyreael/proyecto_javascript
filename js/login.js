@@ -1,5 +1,5 @@
 
-// LOGIN & REGITER 
+// LOGIN & REGITER animation
 const signUpButton = document.getElementById("signUp");
 const signInButton = document.getElementById("signIn");
 const container = document.getElementById("container");
@@ -31,26 +31,68 @@ class User {
     const cart = [];
 
 
-// DOM
 
-const name = document.getElementById("name");
+
+// DOM
+//login
 const pass = document.getElementById("password");
 const email = document.getElementById("email");
-
-
+//register
+const nameReg = document.getElementById("nameReg");
+const passReg = document.getElementById("passReg");
+const emailReg = document.getElementById("emailReg");
+//botones
 const btnIn = document.getElementById("btnIn");
 const btnUp = document.getElementById("btnUp");
-
-const linkToSignUp = document.getElementById("signUp");
-
+//forms
 const formLogin = document.getElementById("formLogin");
-
-const messageLog = document.getElementById("messageLog");
+const formReg = document.getElementById("formReg");
+//validation
+const validation = document.getElementById("messageLog");
 //const logOut = document.getElementById("logOut")
 
 
 /// LOGICA
 
+formReg.addEventListener("submit", e=>{ 
+	e.preventDefault();
+	let messageLog = "";
+	let inMessage = false;
+	let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+	validation.innerHTML = "";
+	if(!nameReg.value || nameReg.value.lenght < 6){
+		messageLog += `El nombre no es válido<br>`;
+		inMessage = true;
+	}
+	if(!regexEmail.test(emailReg.value)){
+		messageLog += `El email no es válido<br>`;
+		inMessage = true;
+	}
+	if(!passReg.value || passReg.value.lenght < 8){
+		messageLog += `La contraseña no es válido<br>`;
+		inMessage = true;
+	}
+	if(inMessage){
+		validation.innerHTML = messageLog;
+	}
+	else{
+		validation.innerHTML = "Usuario registrado con éxito";
+		const userData = {
+			name : nameReg.value,
+			pass : passReg.value,
+			email : emailReg.value,
+		};
+		window.localStorage.setItem("userData", JSON.stringify(userData));
+	}
+})
+
+
+
+
+
+
+
+/*
 const newUser = () => {
 
 	let name = name.value;
@@ -88,3 +130,4 @@ const newUser = () => {
 	}
 
 }
+*/

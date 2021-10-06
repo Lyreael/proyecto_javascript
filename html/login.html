@@ -69,7 +69,7 @@
 
             <div class="form-container sign-up-container">
             <!-- ===== registro ===== -->
-              <form action="">
+              <form id= "formReg" action="">
                 <h2>Crea una cuenta</h2>
                   <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -77,9 +77,9 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                   </div>
                   <span>o usa tu mail para crear una cuenta</span>
-			            <input type="text" id="name" placeholder="Nombre *" />
-                  <input type="email" id="email" placeholder="Email *" />
-                  <input type="password" id="password" placeholder="Contraseña *"/>
+			            <input type="text" id="nameReg" placeholder="Nombre *" />
+                  <input type="email" id="emailReg" placeholder="Email *" />
+                  <input type="password" id="passReg" placeholder="Contraseña *"/>
                   <button class="btn btn-primary" id="btnUp">Registrate</button>
               </form>
             </div>
@@ -88,7 +88,7 @@
             <div class="form-container sign-in-container">
 
               <!-- ===== login ===== -->
-              <form id="formLogin" action="#">
+              <form id="formLogin" class="formLogin" action="#">
                 <h2>Iniciar sesión</h2>
                 <div class="social-container">
                   <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -96,8 +96,8 @@
                   <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>o usa tu cuenta</span>
-                <input type="email" id="nameLogin" placeholder="Email" />
-                <input type="password" id="currentPassword" placeholder="Contraseña" />
+                <input type="email" id="email" placeholder="Email" />
+                <input type="password" id="password" placeholder="Contraseña" />
                 <a href="#" class="passForg">¿Olvidaste tu contraseña?</a>
                 <button class="btn btn-primary" id="btnIn">Iniciar sesión</button>
               </form>
@@ -126,7 +126,7 @@
 
           </div>
 
-          <p id="messageLog" id="messageLog"></p>
+          <p id="messageLog" class="text text-center"></p>
           
         </div>
     </section>

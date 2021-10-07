@@ -88,10 +88,6 @@ formReg.addEventListener("submit", e=>{
 
 
 
-
-
-
-
 /*
 const newUser = () => {
 
@@ -131,3 +127,24 @@ const newUser = () => {
 
 }
 */
+
+//// jQuery
+// input color
+$(function(){
+	$("input").focus(function(){
+		$(this).css("background-color", "#ffaead");
+	});
+	$("input").blur(function(){
+		$(this).css("background-color", "#ffe4e3");
+	});
+});
+
+// double click
+$(function(){
+	$("h1").dblclick(function(){
+		$(this).text("¡¡Únete!!");
+		$(this).css("font-size", "350%");
+	  });
+});
+
+

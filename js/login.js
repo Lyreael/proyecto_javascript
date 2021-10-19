@@ -61,28 +61,27 @@ formReg.addEventListener("submit", e=>{
 	let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 	validation.innerHTML = "";
 	if(!nameReg.value || nameReg.value.lenght < 6){
-		messageLog += `El nombre no es válido<br>`;
+
 		inMessage = true;
 	}
 	if(!regexEmail.test(emailReg.value)){
-		messageLog += `El email no es válido<br>`;
 		inMessage = true;
 	}
 	if(!passReg.value || passReg.value.lenght < 8){
-		messageLog += `La contraseña no es válido<br>`;
 		inMessage = true;
 	}
 	if(inMessage){
 		validation.innerHTML = messageLog;
+		swal("Oh oh!", "Los datos ingresados no son válidos!", "error");
 	}
 	else{
-		validation.innerHTML = "Usuario registrado con éxito";
 		const userData = {
 			name : nameReg.value,
 			pass : passReg.value,
 			email : emailReg.value,
 		};
 		window.localStorage.setItem("userData", JSON.stringify(userData));
+		swal("Excelente!", "Usuario regristrado con exito!", "success");
 	}
 })
 
@@ -139,12 +138,11 @@ $(function(){
 	});
 });
 
-// double click
+/*// double click
 $(function(){
 	$("h1").dblclick(function(){
 		$(this).text("¡¡Únete!!");
 		$(this).css("font-size", "350%");
-	  });
-});
-
+	});
+});*/
 

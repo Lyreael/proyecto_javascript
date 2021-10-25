@@ -298,7 +298,7 @@ div .cat-start {
   display: none;
 }
 
-#cart-container:hover #cart {
+#cart-container #cart.active {
   display: block;
   position: absolute;
   right: 0;
@@ -312,12 +312,21 @@ div .cat-start {
   min-height: 400px;
 }
 
-#cart-container:hover #cart-icon {
+#cart-container #cart-icon {
   color: white;
 }
 
 #cart-icon {
   color: #ffe4e3;
+}
+
+.tabla {
+  display: flex;
+}
+
+.table-title {
+  color: #ff7b79;
+  font-size: "Poppins", san-serif;
 }
 
 div.img__base {

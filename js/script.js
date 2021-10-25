@@ -8,19 +8,21 @@ fetch("../js/products.json")
     renderProducts(data);
   });
 
-// (function () {
-//   $(document).click(function () {
-//     let $item = $("#cart");
-//     if ($item.hasClass("active")) {
-//       $item.removeClass("active");
-//     }
-//   });
+(function () {
+  $(document).click(function () {
+    let $item = $("#cart");
+    if ($item.hasClass("active")) {
+      $item.removeClass("active");
+    }
+  });
 
-//   $("#cart-icon").click(function (e) {
-//     e.stopPropagation();
-//     $("#cart").toggleClass("active");
-//   });
-// })();
+  $("#cart-icon").click(function (e) {
+    e.stopPropagation();
+    $("#cart").toggleClass("active");
+  });
+})();
+
+
 
 function renderProducts(products) {
   //creo la row

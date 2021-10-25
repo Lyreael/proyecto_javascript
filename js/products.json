@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "imgsrc": "../assets/menu/cake-moras.jpg",
+    "title": "Vaimora",
+    "description":"Deliciosa torta de vainilla y moras, esponjoso y con un rellenos suave y delicioso.",
+    "price": 540
+  },
+  {
+    "id": 2,
+    "imgsrc": "../assets/menu/cake-arcoiris.jpg",
+    "title": "Arcoiris Cake",
+    "description":"Una torta llena de sorpresas. Probá para descubrir su increible sabor!",
+    "price": 580
+  },
+  {
+    "id": 3,
+    "imgsrc": "../assets/menu/cake-choco.jpg",
+    "title": "Chocoloca",
+    "description":"Por fuera una torta de chocolate más, pero por dentro un manjar!",
+    "price": 560
+  },
+  {
+    "id": 4,
+    "imgsrc": "../assets/menu/cupcake-nutella.jpg",
+    "title": "Cuptella",
+    "description":"Receta única del cupcake de nutella, con un sabor más intenso y delicioso. Probá su nuevo relleno plus sorpresa!!!",
+    "price": 220
+  },
+  {
+    "id": 5,
+    "imgsrc": "../assets/menu/cupcake-vanila.jpg",
+    "title": "Vainilla clásica",
+    "description":"Clásico cupcake de vinilla que todos amamos, pero con un toque de nuestra esencia!",
+    "price":160
+  },
+  {
+    "id": 6,
+    "imgsrc": "../assets/menu/cupcake-redvelvet.jpg",
+    "title": "Cupcake Love",
+    "description":"Un sueño para los fanáticos del Red Velvet, hicimos la versión individual de nuestra más amada torta.",
+    "price": 180
+  },
+  {
+    "id": 7,
+    "imgsrc": "../assets/menu/donut-chocolate.jpg",
+    "title": "DonLate",
+    "description":"Clásica dona de chocolate, pero con una receta renovada. Más liviana y deliciosa. Con un touch de choco amargo y crumble de almendras!",
+    "price": 120
+  },
+  {
+    "id": 8,
+    "imgsrc": "../assets/menu/donut-frutilla.jpg",
+    "title": "Frutinuts",
+    "description":"Donut rellena de una suave crema de frutillas, perfecta para compartir en una tarde cálida.",
+    "price": 130 
+  },
+  {
+    "id": 9,
+    "imgsrc": "../assets/menu/donut-oreo.jpg",
+    "title": "Cuptella",
+    "description":"Para los Oreo fans, hicimos la receta de estas donuts riquísimas y exclusivas para que los OreoLovers disfruten a los grande!",
+    "price": 180
+  }
+]

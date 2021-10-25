@@ -51,8 +51,36 @@
             <a href="contact.html">Contacto</a>
           </li>
           <li>
-            <a href="login.html">Tu cuenta</a>
+            <a href="login.html"><i class="far fa-user-circle fa-2x"></i></a>
           </li>
+          <li class="submenu">
+
+            <div id="cart-container">
+            <a id="cart-icon"><i class="fas fa-shopping-cart fa-lg"></i></a>
+
+            <div id="cart">
+                                    
+              <table id="cart-list">
+                  <thead>
+                      <tr>
+                          <th>Imagen</th>
+                          <th>Nombre</th>
+                          <th>Precio</th>                         
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                    
+                  </tbody>
+              </table>
+
+              <a href="#" id="cart-empty" class="button">Vaciar Carrito</a>
+
+            </div>
+            </div>
+          </li>
+
           <li></li>
         </ul>
       </div>
@@ -61,6 +89,7 @@
 </header>
 
 <!-- Contenido-->
+<button onclick="topFunction()" class="btn btn-primary btn-btt" type="button" title="Go to top"> <i class="fas fa-arrow-up"></i> </button>
 
 <section>
   <div id="home" class="container">
@@ -69,254 +98,16 @@
               <div class="col-lg-6 m-auto">
                   <h1 class="title">Nuestros Productos</h1>
                   <p>
-                    Conoce nuestros productos estrellas, te invitamos a probarlos. <br> Shop disponible proximamente...
+                    Conoce nuestros productos estrellas, te invitamos a probarlos. <br> 
                   </p>
               </div>
-        <!-- Sección de tortas -->
-        <!--<select name="" id=""productoElegido></select>   flechita con opciones--> 
-        <div id="tienda"></div>
-          </div>
-          <div class="row">
-            <h2 class="subtitle subtitle-product" id="tortas" >Tortas</h2>
-              <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
-                  <div class="hover-us card h-100">
-                      <a href="#">
-                          <img src="../assets/menu/cake-moras.jpg" class=" card-img-top" alt="Torta de Vainilla y Moras">
-                      </a>
-                      <div class="card-body">
-                          <ul class="list-unstyled d-flex justify-content-between">
-                            <li>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                          </li>
-                              <li class="text-muted text-right">$540.00</li>
-                          </ul>
-                          <h4 class="h4 text-decoration-none">Vaimora</h4> <!--futura shop-->
-                          <p class="card-text">
-                              Deliciosa torta de vainilla y moras, esponjoso y con un rellenos suave y delicioso.
-                          </p>
-                          <button  class="btn btn-primary" onclick="clickMe()"> Comprar</button>
-                          <button class="btn btn-primary" id="precioEnvio" > Precio con envío</button>
-                          <p id="mostrarPrecio"></p>
-                        </div>
-                  </div>
-              </div>
-              <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
-                  <div class="hover-us card h-100">
-                      <a href="#">
-                          <img src="../assets/menu/cake-arcoiris.jpg" class="card-img-top" alt="Torta arcoiris KEKI">
-                      </a>
-                      <div class="card-body">
-                          <ul class="list-unstyled d-flex justify-content-between">
-                              <li>
-                                  <i class="text-warning fa fa-star"></i>
-                                  <i class="text-warning fa fa-star"></i>
-                                  <i class="text-warning fa fa-star"></i>
-                                  <i class="text-warning fa fa-star"></i>
-                                  <i class="text-warning fa fa-star"></i>
-                              </li>
-                              <li class="text-muted text-right">$580.00</li>
-                          </ul>
-                          <h4 class="h4 text-decoration-none">Arcoiris Cake</h4>
-                          <p class="card-text">
-                            Una torta llena de sorpresas. Probá para descubrir su increible sabor!
-                          </p>
-                          <button class="btn btn-primary" > Comprar</button>
-                          
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
-                  <div class="hover-us card h-100">
-                      <a href="#">
-                          <img src="../assets/menu/cake-choco.jpg" class="card-img-top" alt="Torta de chocolate KEKI">
-                      </a>
-                      <div class="card-body">
-                          <ul class="list-unstyled d-flex justify-content-between">
-                              <li>
-                                  <i class="text-warning fa fa-star"></i>
-                                  <i class="text-warning fa fa-star"></i>
-                                  <i class="text-warning fa fa-star"></i>
-                                  <i class="text-warning fa fa-star"></i>
-                                  <i class="text-warning fa fa-star"></i>
-                              </li>
-                              <li class="text-muted text-right">$560.00</li>
-                          </ul>
-                          <h4 class="h4 text-decoration-none">Chocoloca</h4>
-                          <p class="card-text">
-                              Por fuera una torta de chocolate más, pero por dentro un manjar!
-                          </p>
-                          <button class="btn btn-primary"> Comprar</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-    <!-- Sección de cupcakes -->
+    </div>
     
-      <div class="row text-center py-3">
-        </div>
-        <div class="row">
-          <h2 class="subtitle subtitle subtitle-product" id="cupcakes" >Cupcakes</h2>
-            <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
-                <div class="hover-us card h-100">
-                    <a href="#">
-                        <img src="../assets/menu/cupcake-nutella.jpg" class="card-img-top" alt="Cupcake de Nutella KEKI">
-                    </a>
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between">
-                          <li>
-                            <i class="text-warning fa fa-star"></i>
-                            <i class="text-warning fa fa-star"></i>
-                            <i class="text-warning fa fa-star"></i>
-                            <i class="text-warning fa fa-star"></i>
-                            <i class="text-warning fa fa-star"></i>
-                        </li>
-                            <li class="text-muted text-right">$220.00</li>
-                        </ul>
-                        <h4 class="h4 text-decoration-none">Cuptella</h4> <!--futura shop-->
-                        <p class="card-text">
-                            Nuevo receta única del cupcake de nutella, con un sabor más intenso y delicioso. Probá su nuevo relleno plus sorpresa!!!
-                        </p>
-                        <button class="btn btn-primary"> Comprar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
-                <div class="hover-us card h-100">
-                    <a href="#">
-                        <img src="../assets/menu/cupcake-redvelvet.jpg" class="card-img-top" alt="Cupcake Redvelvet KEKI">
-                    </a>
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between">
-                            <li>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                            </li>
-                            <li class="text-muted text-right">$180.00</li>
-                        </ul>
-                        <h4 class="h4 text-decoration-none">Cupcake Love</h4>
-                        <p class="card-text">
-                          Un sueño para los fanáticos del Red Velvet, hicimos la versión individual de nuestra más amada torta. 
-                        </p>
-                        <button class="btn btn-primary"> Comprar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
-                <div class="hover-us card h-100">
-                    <a href="#">
-                        <img src="../assets/menu/cupcake-vanila.jpg" class="card-img-top" alt="Cupcake de vainilla KEKI">
-                    </a>
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between">
-                            <li>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                            </li>
-                            <li class="text-muted text-right">$110.00</li>
-                        </ul>
-                        <h4 class="h4 text-decoration-none">Vainilla clásica</h4>
-                        <p class="card-text">
-                            Por fuera una torta de chocolate más, pero por dentro un manjar!
-                        </p>
-                        <button class="btn btn-primary"> Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    <!-- Sección de donuts -->
-      <div class="row text-center py-3">
-      </div>
-      <div class="row">
-        <h2 class="subtitle-product" id="donuts">Donuts</h2>
-          <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
-              <div class="hover-us card h-100">
-                  <a href="#">
-                      <img src="../assets/menu/donut-chocolate.jpg" class="card-img-top" alt="Donut de chocolate KEKI">
-                  </a>
-                  <div class="card-body">
-                      <ul class="list-unstyled d-flex justify-content-between">
-                        <li>
-                          <i class="text-warning fa fa-star"></i>
-                          <i class="text-warning fa fa-star"></i>
-                          <i class="text-warning fa fa-star"></i>
-                          <i class="text-warning fa fa-star"></i>
-                          <i class="text-warning fa fa-star"></i>
-                      </li>
-                          <li class="text-muted text-right">$120.00</li>
-                      </ul>
-                      <h4 class="h4 text-decoration-none">DonLate</h4> <!--futura shop-->
-                      <p class="card-text">
-                          Clásica dona de chocolate, pero con una receta renovada. Más liviana y deliciosa. Con un touch de choco amargo y crumble de almendras!
-                      </p>
-                      <button class="btn btn-primary"> Comprar</button>
-                  </div>
-              </div>
-          </div>
-          <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
-              <div class="hover-us card h-100">
-                  <a href="#">
-                      <img src="../assets/menu/donut-frutilla.jpg" class=" card-img-top" alt="Donuts de frutilla KEKI">
-                  </a>
-                  <div class="card-body">
-                      <ul class="list-unstyled d-flex justify-content-between">
-                          <li>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                          </li>
-                          <li class="text-muted text-right">$130.00</li>
-                      </ul>
-                      <h4 class="h4 text-decoration-none">Frutinuts</h4>
-                      <p class="card-text">
-                        Donut rellena de una suave crema de frutillas, perfecta para compartir en una tarde cálida.
-                      </p>
-                      <button class="btn btn-primary"> Comprar</button>
-                  </div>
-              </div>
-          </div>
-          <div class="col-sm-12 col-lg-4 col-md-6 mb-4">
-              <div class="hover-us card h-100">
-                  <a href="#">
-                      <img src="../assets/menu/donut-oreo.jpg" class="card-img-top" alt="Donut de Oreo KEKI">
-                  </a>
-                  <div class="card-body">
-                      <ul class="list-unstyled d-flex justify-content-between">
-                          <li>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                              <i class="text-warning fa fa-star"></i>
-                          </li>
-                          <li class="text-muted text-right">$150.00</li>
-                      </ul>
-                      <h4 class="h4 text-decoration-none">Donuts de Oreo</h4>
-                      <p class="card-text">
-                          para los Oreo fans, hicimos la receta de estas donuts riquísimas y exclusivas para que los OreoLovers disfruten a los grande!
-                      </p>
-                      <button class="btn btn-primary"> Comprar</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-          
-      </div>
-  </section>
-
+    <!-- Productos con JS -->
+    <div id="contenedor-rows"></div>
+  </div>
+</section>
   <!-- ====== Footer BS ====== -->
 
   <div class="footer-dark">
@@ -340,8 +131,10 @@
           </div>
 
           <div class="col-lg-1 col-md-12 col-sm-12 btn-center">
-            <a class="btn btn-primary btn-btt" type="button" href="#home"> <i class="fas fa-arrow-up"></i> </a>
+ 
+
           </div>
+
         </div>
 
 
@@ -359,9 +152,14 @@
       </div>
     </footer>
   </div>
+
     <!--scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="../boost/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="../js/script.js" ></script>
 </body>
 </html>
+
+
+

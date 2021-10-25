@@ -117,6 +117,20 @@ div .cat-start {
 
 .btn-btt {
   border-radius: 1.5rem;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.price-style {
+  font-size: 26px;
+  color: #6c757d;
+}
+
+.price-style:hover {
+  color: #ff7b79;
 }
 
 /* main-header start */
@@ -165,7 +179,7 @@ div .cat-start {
 }
 
 .main-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
@@ -273,12 +287,39 @@ div .cat-start {
   .main-header .current .icon-bar-3 {
     width: 10px;
   }
-  .main-header .navbar-toggler:hover .icon-bar, .main-header .navbar-toggler:focus .icon-bar {
+  .main-header .navbar-toggler:hover .icon-bar,
+  .main-header .navbar-toggler:focus .icon-bar {
     background-color: #fff5f5;
   }
 }
 
 /*End Navbar*/
+#cart {
+  display: none;
+}
+
+#cart-container:hover #cart {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 9999;
+  background-color: #fff5f5;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 20px;
+  min-width: 400px;
+  min-height: 400px;
+}
+
+#cart-container:hover #cart-icon {
+  color: white;
+}
+
+#cart-icon {
+  color: #ffe4e3;
+}
+
 div.img__base {
   display: flex;
   flex-direction: column;
@@ -615,6 +656,10 @@ button.ghost {
   font-weight: bolder;
   text-align: center;
   color: #8b247e;
+}
+
+.menu-icons {
+  width: 10%;
 }
 
 .footer-dark {

@@ -1,6 +1,6 @@
 const containerRows = document.querySelector("#contenedor-rows");
 
-let cartProducts = [];
+let cartProducts = window.localStorage.getItem("cartProducts") && JSON.parse(window.localStorage.getItem("cartProducts")) || [];
 
 fetch("../js/products.json")
   .then((response) => response.json())
@@ -9,16 +9,24 @@ fetch("../js/products.json")
   });
 
 (function () {
-  $(document).click(function () {
-    let $item = $("#cart");
-    if ($item.hasClass("active")) {
-      $item.removeClass("active");
+  $(document).click(function (e) {
+    if (!e.target.className.includes("cart")) {
+      let $item = $("#cart");
+      if ($item.hasClass("active")) {
+        $item.removeClass("active");
+      }
     }
   });
 
   $("#cart-icon").click(function (e) {
     e.stopPropagation();
     $("#cart").toggleClass("active");
+  });
+
+  $("#cart-empty").click(function (e) {
+    e.stopPropagation();
+    cartProducts = [];
+    renderCartItems();
   });
 })();
 
@@ -78,25 +86,39 @@ function renderCartItems() {
   let containerItems = document.querySelector("#cart-item-container");
 
   let innerHTML = "";
- 
+
   cartProducts.forEach((product) => {
     const { imgsrc, title, description, price, id } = product;
 
     innerHTML += ` 
-    <div id="cart-item-container" class="container">
-    <div class="row" style="border-bottom: 1px solid grey; padding-bottom: 10px;">
-        <div class="col-3"><img  height="50px" width="50px" src="../assets/menu/cake-arcoiris.jpg" alt=""></div>
-        <div class="col-3"><p>pepe</p></div>
-        <div class="col-2"><p>x1</p></div>
-        <div class="col-3"> <p>$400</p></div>
-        <div class="col-1"><a style="cursor:pointer" id="borrar">X</a></div>
+    <div id="cart-item-container" class="cart container">
+    <div class="cart row" style="border-bottom: 1px solid grey; padding-bottom: 10px;">
+        <div class="cart col-3"><img  class="cart" height="50px" width="50px" src="${imgsrc}" alt=""></div>
+        <div class="cart col-3"><p class="cart">${title}</p></div>
+        <div class="cart col-2"><p class="cart">x1</p></div>
+        <div class="cart col-3"> <p class="cart">${price}</p></div>
+        <div class="cart col-1"><a style="cursor:pointer" id="borrar_${id}">X</a></div>
   
     </div>
   </div>
-    `; 
+    `;
   });
   containerItems.innerHTML = innerHTML;
+
+  cartProducts.forEach((product) => {
+    const btnBorrar = document.querySelector("#borrar_" + product.id);
+
+    btnBorrar.addEventListener("click", (e) => {
+      cartProducts = cartProducts.filter((p) => p.id != product.id);
+      renderCartItems();
+      e.stopPropagation();
+    });
+  });
+
+  window.localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
 }
+
+renderCartItems();
 
 // Boton Scroll back to Top
 //Obtenemos el boton

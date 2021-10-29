@@ -1,13 +1,17 @@
 const containerRows = document.querySelector("#contenedor-rows");
 
-let cartProducts = window.localStorage.getItem("cartProducts") && JSON.parse(window.localStorage.getItem("cartProducts")) || [];
-
+let cartProducts =
+  (window.localStorage.getItem("cartProducts") &&
+    JSON.parse(window.localStorage.getItem("cartProducts"))) ||
+  [];
+// Carga de datos desde API dummy
 fetch("../js/products.json")
   .then((response) => response.json())
   .then((data) => {
     renderProducts(data);
   });
 
+//  Addlisteners
 (function () {
   $(document).click(function (e) {
     if (!e.target.className.includes("cart")) {
@@ -30,6 +34,7 @@ fetch("../js/products.json")
   });
 })();
 
+// Rederiza los productos
 function renderProducts(products) {
   //creo la row
   let row = document.createElement("div");
@@ -76,7 +81,25 @@ function renderProducts(products) {
 
     btnProd.addEventListener("click", (ee) => {
       console.log(product);
-      cartProducts.push(product);
+      //agregar producto a cartProducts si este todavia no esta en el carrito de compras
+      if (!cartProducts.some((p) => p.id == product.id)) {
+        let productToAdd  = Object.assign({}, product);
+        productToAdd.quantity = 1;
+        cartProducts.push(productToAdd);
+        //sino, incrementa la cantidad del producto
+      } else {
+        cartProducts = cartProducts.map((p) => {
+          if (p.id == product.id) {
+            if (!p.quantity) {
+              p.quantity = 1;
+            } else {
+              p.quantity++;
+            }
+            p.subtotal = p.quantity * p.price;
+          }
+          return p;
+        });
+      }
       renderCartItems();
     });
   });
@@ -86,18 +109,18 @@ function renderCartItems() {
   let containerItems = document.querySelector("#cart-item-container");
 
   let innerHTML = "";
-
   cartProducts.forEach((product) => {
     const { imgsrc, title, description, price, id } = product;
-
+    let quantity = product.quantity || 1;
+    let subtotal = product.subtotal || price;
     innerHTML += ` 
     <div id="cart-item-container" class="cart container">
-    <div class="cart row" style="border-bottom: 1px solid grey; padding-bottom: 10px;">
-        <div class="cart col-3"><img  class="cart" height="50px" width="50px" src="${imgsrc}" alt=""></div>
-        <div class="cart col-3"><p class="cart">${title}</p></div>
-        <div class="cart col-2"><p class="cart">x1</p></div>
-        <div class="cart col-3"> <p class="cart">${price}</p></div>
-        <div class="cart col-1"><a style="cursor:pointer" id="borrar_${id}">X</a></div>
+    <div class="row cart padCart">
+        <div class="cart col-3"><img class="cart imgCart"  src="${imgsrc}" alt=""></div>
+        <div class="cart col-3"><p class="cart titlecart alCent text-capitalize">${title}</p></div>
+        <div class="cart col-2"><p class="cart titlecart alCent text-capitalize">${quantity}</p></div>
+        <div class="cart col-3"> <p class="cart titlecart alCent text-capitalize">${subtotal}</p></div>
+        <div class="cart col-1"><a class="borrar text-decoration-none" style="cursor:pointer" id="borrar_${id}">x</a></div>
   
     </div>
   </div>
@@ -115,7 +138,7 @@ function renderCartItems() {
     });
   });
 
-  window.localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
+  window.localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
 }
 
 renderCartItems();

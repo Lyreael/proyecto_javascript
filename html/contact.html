@@ -50,11 +50,24 @@
               <li>
                 <a href="contact.html" class="active active-first">Contacto</a>
               </li>
-              <li>
-                <a href="login.html"><i class="far fa-user-circle fa-2x"></i></a>
-              </li>
-              <li>
-                <a href=""><i class="fas fa-shopping-cart fa-lg"></i></a>
+              <li class="submenu">
+                <div id="cart-container">
+                <a id="cart-icon"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                <div id="cart" class="cart">
+                  <div class="container cart">
+                    <div class="row cart">
+                        <div class="cart col-3"></div>
+                        <div class="cart col-3"><p class="titlecart  text-capitalize">Producto</p></div>
+                        <div class="cart col-2"><p class="titlecart text-capitalize">Cant</p></div>
+                        <div class="cart col-3"><p class="titlecart text-capitalize">Subtotal</p></div>
+                        <div class="cart col-1"></div>
+                    </div>
+                  </div>
+                  <div id="cart-item-container" class="cart container">
+                </div>
+                  <a href="#" id="cart-empty" class="button emptyCart">Vaciar Carrito</a>
+                </div>
+                </div>
               </li>
               <li></li>
             </ul>
@@ -182,6 +195,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../boost/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

@@ -202,6 +202,7 @@
 /*End Navbar*/
 #cart {
   display: none;
+  color:white;
 }
 #cart-container{
 
@@ -215,27 +216,54 @@
             background-color: $white;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            padding: 20px;
-            min-width: 400px;
-            min-height: 400px;
-        }
+            padding: 10px;
+            max-width: 400px;
+            box-shadow: rgb(143, 143, 143) 0px 5px 10px;
+            
+            .row.cart{
+              border-bottom: 1px solid $primary; 
+              &.padCart{
+                padding: 10px 0 5px 0;
+              }
+              
+              p.titlecart{
+
+                color: $primary;
+              }
+              div>p.alCent{
+                padding-top: 15px;
+              }
+              
+            }
+}
         #cart-icon { color:white;}
-
-
-
 }
 
 #cart-icon{
     color:$lighter;
+    cursor: pointer;
 }
 
-.tabla{
-    display: flex;
-
+.imgCart{
+  width: 100%;
+}
+.borrar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  color:grey;
+  &:hover{
+    color:black;
+  }
 }
 
-.table-title{
-    color: $primary;
-    font-size: $font-subtitle;
+.emptyCart{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color:grey;
+  &:hover{
+    color:black;
+  }
 }
-

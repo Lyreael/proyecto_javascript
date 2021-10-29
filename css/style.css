@@ -296,6 +296,7 @@ div .cat-start {
 /*End Navbar*/
 #cart {
   display: none;
+  color: white;
 }
 
 #cart-container #cart.active {
@@ -307,9 +308,25 @@ div .cat-start {
   background-color: #fff5f5;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding: 20px;
-  min-width: 400px;
-  min-height: 400px;
+  padding: 10px;
+  max-width: 400px;
+  box-shadow: #8f8f8f 0px 5px 10px;
+}
+
+#cart-container #cart.active .row.cart {
+  border-bottom: 1px solid #ff7b79;
+}
+
+#cart-container #cart.active .row.cart.padCart {
+  padding: 10px 0 5px 0;
+}
+
+#cart-container #cart.active .row.cart p.titlecart {
+  color: #ff7b79;
+}
+
+#cart-container #cart.active .row.cart div > p.alCent {
+  padding-top: 15px;
 }
 
 #cart-container #cart-icon {
@@ -318,15 +335,34 @@ div .cat-start {
 
 #cart-icon {
   color: #ffe4e3;
+  cursor: pointer;
 }
 
-.tabla {
+.imgCart {
+  width: 100%;
+}
+
+.borrar {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  color: grey;
 }
 
-.table-title {
-  color: #ff7b79;
-  font-size: "Poppins", san-serif;
+.borrar:hover {
+  color: black;
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: grey;
+}
+
+.emptyCart:hover {
+  color: black;
 }
 
 div.img__base {
